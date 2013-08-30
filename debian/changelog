@@ -1,0 +1,80 @@
+opengl-es-virtual-drv (0.1.1-9) unstable; urgency=low
+
+  * Remove e4412 pkgs
+  * Git: slp/pkgs/o/opengl-es-virtual-drv
+  * Tag: opengl-es-virtual-drv_0.1.1-9
+
+ -- Minsu Han <minsu81.han@samsung.com>  Mon, 23 Apr 2012 14:31:06 +0900
+
+opengl-es-virtual-drv (0.1.1-8) unstable; urgency=low
+
+  * update obs spec file
+  * Git: slp/pkgs/o/opengl-es-virtual-drv
+  * Tag: opengl-es-virtual-drv_0.1.1-8
+
+ -- Minsu Han <minsu81.han@samsung.com>  Wed, 14 Mar 2012 21:07:46 +0900
+
+opengl-es-virtual-drv (0.1.1-7) unstable; urgency=low
+
+  * Add opengl-es-mali400mp-e4412 in conflicts/replaces field
+  * Git: slp/pkgs/o/opengl-es-virtual-drv
+  * Tag: opengl-es-virtual-drv_0.1.1-7
+
+ -- Minsu Han <minsu81.han@samsung.com>  Tue, 20 Dec 2011 09:48:33 +0900
+
+opengl-es-virtual-drv (0.1.1-6) unstable; urgency=low
+
+  * Modify maintainer and add copyright and boilerplate
+  * Git: 165.213.180.234:slp/pkgs/o/opengl-es-virtual-drv
+  * Tag: opengl-es-virtual-drv_0.1.1-6
+
+ -- Minsu Han <minsu81.han@samsung.com>  Tue, 06 Dec 2011 19:49:15 +0900
+
+opengl-es-virtual-drv (0.1.1-5) unstable; urgency=low
+
+  * Add libump in conflicts/replaces field
+  * Git: 165.213.180.234:slp/pkgs/o/opengl-es-virtual-drv
+  * Tag: opengl-es-virtual-drv_0.1.1-5
+
+ -- Minsu Han <minsu81.han@samsung.com>  Tue, 04 Oct 2011 14:25:16 +0900
+
+opengl-es-virtual-drv (0.1.1-4) unstable; urgency=low
+
+  * debian/control
+     + add opengl-es-omap4430-sgx540 and opengl-es-marvell to
+       Conflicts and Replaces.
+  * Git: 165.213.180.234:slp/pkgs/o/opengl-es-virtual-drv
+  * Tag: opengl-es-virtual-drv_0.1.1-4
+
+ -- Gwanglim Lee <gl77.lee@samsung.com>  Thu, 21 Apr 2011 21:10:37 +0900
+
+opengl-es-virtual-drv (0.1.1-3) unstable; urgency=low
+
+  * update copyright and put the boilerplate
+  * Git: 165.213.180.234:slp/pkgs/o/opengl-es-virtual-drv
+  * Tag: opengl-es-virtual-drv_0.1.1-3
+
+ -- Gwanglim Lee <gl77.lee@samsung.com>  Wed, 08 Dec 2010 23:34:51 +0900
+
+opengl-es-virtual-drv (0.1.1-2) unstable; urgency=low
+
+  * correct Conflicts in debian/control.
+  * Git: 165.213.180.234:/git/slp/pkgs/opengl-es-virtual-drv
+  * Tag: opengl-es-virtual-drv_0.1.1-2
+
+ -- Gwanglim Lee <gl77.lee@samsung.com>  Fri, 03 Dec 2010 15:36:30 +0900
+
+opengl-es-virtual-drv (0.1.1-1) unstable; urgency=low
+
+  * Initial Release.
+  * Git: 165.213.180.234:/git/slp/pkgs/opengl-es-virtual-drv
+  * Tag: opengl-es-virtual-drv_0.1.1-1
+
+ -- Gwanglim Lee <gl77.lee@samsung.com>  Thu, 02 Dec 2010 13:54:40 +0900
+
+opengl-es-virtual-drv (0.1-1) unstable; urgency=low
+
+  * Initial Release
+
+ -- Gwanglim Lee <gl77.lee@samsung.com>  Wed, 01 Dec 2010 23:24:10 +0900
+

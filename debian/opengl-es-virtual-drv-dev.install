@@ -1,0 +1,6 @@
+usr/include/EGL
+usr/include/GLES
+usr/include/GLES2
+usr/include/KHR
+usr/lib/pkgconfig/gles11.pc
+usr/lib/pkgconfig/gles20.pc
