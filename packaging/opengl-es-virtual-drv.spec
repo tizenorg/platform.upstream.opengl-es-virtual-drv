@@ -38,8 +38,7 @@ needed by programs that want to compile with OpenGL ES.
 %setup -q -n %{name}-%{version}
 
 %build
-./autogen.sh
-%configure --disable-static --prefix=%{_prefix}
+%reconfigure --disable-static --prefix=%{_prefix}
 
 make %{?jobs:-j%jobs}
 
@@ -84,3 +83,4 @@ mv %{buildroot}/usr/lib/libGLESv2.so %{buildroot}/usr/lib/mesa-gl/libGLESv2.so.2
 %{_includedir}/KHR/khrplatform.h
 %{_libdir}/pkgconfig/gles20.pc
 %{_libdir}/pkgconfig/gles11.pc
+%{_libdir}/pkgconfig/egl.pc
