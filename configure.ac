@@ -20,6 +20,7 @@ AC_CONFIG_FILES([
 		 src/gles2/Makefile
 		 gles11.pc
 		 gles20.pc
+		 egl.pc
 		 ])
 
 AC_OUTPUT

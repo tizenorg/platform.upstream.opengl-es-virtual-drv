@@ -1,6 +1,6 @@
 SUBDIRS = src
 
-pkgconfig_DATA = gles11.pc gles20.pc
+pkgconfig_DATA = gles11.pc gles20.pc egl.pc
 pkgconfigdir = $(libdir)/pkgconfig
 
 MAINTAINERCLEANFILES = \
