@@ -1,6 +1,7 @@
 #ifndef __gl_h_
 #define __gl_h_
 
+/* $Revision: 10601 $ on $Date:: 2010-03-04 22:15:27 -0800 #$ */
 
 #include <GLES/glplatform.h>
 
@@ -37,10 +38,10 @@ typedef khronos_ssize_t  GLsizeiptr;
 /*************************************************************/
 
 /* OpenGL ES core versions */
-#define GL_VERSION_ES_CM_1_0		1
-#define GL_VERSION_ES_CL_1_0		1
-#define GL_VERSION_ES_CM_1_1		1
-#define GL_VERSION_ES_CL_1_1		1
+#define GL_VERSION_ES_CM_1_0          1
+#define GL_VERSION_ES_CL_1_0          1
+#define GL_VERSION_ES_CM_1_1          1
+#define GL_VERSION_ES_CL_1_1          1
 
 /* ClearBufferMask */
 #define GL_DEPTH_BUFFER_BIT               0x00000100
@@ -278,8 +279,8 @@ typedef khronos_ssize_t  GLsizeiptr;
 /*      GL_TEXTURE_WRAP_S */
 /*      GL_TEXTURE_WRAP_T */
 
-#define GL_NUM_COMPRESSED_TEXTURE_FORMATS       0x86A2
-#define GL_COMPRESSED_TEXTURE_FORMATS           0x86A3
+#define GL_NUM_COMPRESSED_TEXTURE_FORMATS 0x86A2
+#define GL_COMPRESSED_TEXTURE_FORMATS     0x86A3
 
 /* HintMode */
 #define GL_DONT_CARE                      0x1100
@@ -504,11 +505,11 @@ typedef khronos_ssize_t  GLsizeiptr;
 #define GL_ARRAY_BUFFER                   0x8892
 #define GL_ELEMENT_ARRAY_BUFFER           0x8893
 
-#define GL_ARRAY_BUFFER_BINDING           0x8894
-#define GL_ELEMENT_ARRAY_BUFFER_BINDING   0x8895
-#define GL_VERTEX_ARRAY_BUFFER_BINDING    0x8896
-#define GL_NORMAL_ARRAY_BUFFER_BINDING    0x8897
-#define GL_COLOR_ARRAY_BUFFER_BINDING     0x8898
+#define GL_ARRAY_BUFFER_BINDING               0x8894
+#define GL_ELEMENT_ARRAY_BUFFER_BINDING       0x8895
+#define GL_VERTEX_ARRAY_BUFFER_BINDING        0x8896
+#define GL_NORMAL_ARRAY_BUFFER_BINDING        0x8897
+#define GL_COLOR_ARRAY_BUFFER_BINDING         0x8898
 #define GL_TEXTURE_COORD_ARRAY_BUFFER_BINDING 0x889A
 
 #define GL_STATIC_DRAW                    0x88E4
@@ -573,17 +574,17 @@ typedef khronos_ssize_t  GLsizeiptr;
 
 /* OES_point_size_array */
 #ifndef GL_OES_point_size_array
-#define GL_POINT_SIZE_ARRAY_OES           0x8B9C
-#define GL_POINT_SIZE_ARRAY_TYPE_OES      0x898A
-#define GL_POINT_SIZE_ARRAY_STRIDE_OES    0x898B
-#define GL_POINT_SIZE_ARRAY_POINTER_OES   0x898C
-#define GL_POINT_SIZE_ARRAY_BUFFER_BINDING_OES 0x8B9F
+#define GL_POINT_SIZE_ARRAY_OES                                 0x8B9C
+#define GL_POINT_SIZE_ARRAY_TYPE_OES                            0x898A
+#define GL_POINT_SIZE_ARRAY_STRIDE_OES                          0x898B
+#define GL_POINT_SIZE_ARRAY_POINTER_OES                         0x898C
+#define GL_POINT_SIZE_ARRAY_BUFFER_BINDING_OES                  0x8B9F
 #endif
 
 /* GL_OES_point_sprite */
 #ifndef GL_OES_point_sprite
-#define GL_POINT_SPRITE_OES               0x8861
-#define GL_COORD_REPLACE_OES              0x8862
+#define GL_POINT_SPRITE_OES                                     0x8861
+#define GL_COORD_REPLACE_OES                                    0x8862
 #endif
 
 /*************************************************************/
