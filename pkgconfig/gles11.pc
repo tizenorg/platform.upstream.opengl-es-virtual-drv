@@ -1,11 +1,11 @@
-prefix=@prefix@
-exec_prefix=@exec_prefix@
-libdir=@libdir@
-includedir=@includedir@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
 
 Name: gles11
 Description: OpenGL-ES 1.1 Library for Virtual Driver
-Version: @VERSION@
+Version: 0.1
 Requires:
 Libs: -L${libdir} -lGLESv1_CM -lEGL
 Cflags: -I${includedir}

@@ -1,0 +1,11 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: glesv3
+Description: OpenGL-ES 3.0 Library for Virtual Driver
+Version: 0.1
+Requires:
+Libs: -L${libdir} -lGLESv3 -lEGL
+Cflags: -I${includedir}
