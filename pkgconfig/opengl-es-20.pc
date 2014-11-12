@@ -1,11 +1,11 @@
-prefix=@prefix@
-exec_prefix=@exec_prefix@
-libdir=@libdir@
-includedir=@includedir@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
 
-Name: gles20
+Name: opengl-es-20
 Description: OpenGL-ES 2.0 Library for Virtual Driver
-Version: @VERSION@
+Version: 0.1
 Requires:
 Libs: -L${libdir} -lGLESv2 -lEGL
 Cflags: -I${includedir}

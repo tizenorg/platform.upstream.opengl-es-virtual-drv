@@ -50,22 +50,16 @@ B License Verion 2.0. For details, see http://oss.sgi.com/projects/FreeB/ .
  --------------------------------------------------------------
  Files                            Copyright
  --------------------------------------------------------------
- src/egl/*.[ch]                   Samsung Electronics Co., Ltd.
- src/gles1/*.[ch]
- src/gles2/*.[ch]
+ src/*.[ch]                       Samsung Electronics Co., Ltd.
 
- src/include/EGL/*                Khronos Group Inc.
- src/include/KHR/*
+ src/include/*                    Khronos Group Inc.
 
  --------------------------------------------------------------
  Files                            License
  --------------------------------------------------------------
- src/egl/*.[ch]                   GNU LGPL
- src/gles1/*.[ch]
- src/gles2/*.[ch]
+ src/*.[ch]                       GNU LGPL
 
- src/include/GLES/*               SGI Free B
- src/include/GLES2/*
+ src/include/*                    SGI Free B
 
 ----------------------------------------------------------------------
 

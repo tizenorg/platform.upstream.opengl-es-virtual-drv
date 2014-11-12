@@ -337,13 +337,13 @@ typedef struct __GLsync *GLsync;
 #endif
 
 /* GL_EXT_multisampled_render_to_texture */
-//#ifndef GL_EXT_multisampled_render_to_texture
-//#define GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_SAMPLES_EXT           0x8D6C
+#ifndef GL_EXT_multisampled_render_to_texture
+#define GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_SAMPLES_EXT           0x8D6C
 /* reuse values from GL_EXT_framebuffer_multisample (desktop extension) */
-//#define GL_RENDERBUFFER_SAMPLES_EXT                             0x8CAB
-//#define GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_EXT               0x8D56
-//#define GL_MAX_SAMPLES_EXT                                      0x8D57
-//#endif
+#define GL_RENDERBUFFER_SAMPLES_EXT                             0x8CAB
+#define GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_EXT               0x8D56
+#define GL_MAX_SAMPLES_EXT                                      0x8D57
+#endif
 
 /* GL_EXT_multi_draw_arrays */
 /* No new tokens introduced by this extension. */
@@ -914,19 +914,19 @@ typedef void (GL_APIENTRYP PFNGLGETTEXGENXVOESPROC) (GLenum coord, GLenum pname,
 #endif
 
 /* GL_OES_vertex_array_object */
-//#ifndef GL_OES_vertex_array_object
-//#define GL_OES_vertex_array_object 1
-//#ifdef GL_GLEXT_PROTOTYPES
-//GL_API void GL_APIENTRY glBindVertexArrayOES (GLuint array);
-//GL_API void GL_APIENTRY glDeleteVertexArraysOES (GLsizei n, const GLuint *arrays);
-//GL_API void GL_APIENTRY glGenVertexArraysOES (GLsizei n, GLuint *arrays);
-//GL_API GLboolean GL_APIENTRY glIsVertexArrayOES (GLuint array);
-//#endif
-//typedef void (GL_APIENTRYP PFNGLBINDVERTEXARRAYOESPROC) (GLuint array);
-//typedef void (GL_APIENTRYP PFNGLDELETEVERTEXARRAYSOESPROC) (GLsizei n, const GLuint *arrays);
-//typedef void (GL_APIENTRYP PFNGLGENVERTEXARRAYSOESPROC) (GLsizei n, GLuint *arrays);
-//typedef GLboolean (GL_APIENTRYP PFNGLISVERTEXARRAYOESPROC) (GLuint array);
-//#endif
+#ifndef GL_OES_vertex_array_object
+#define GL_OES_vertex_array_object 1
+#ifdef GL_GLEXT_PROTOTYPES
+GL_API void GL_APIENTRY glBindVertexArrayOES (GLuint array);
+GL_API void GL_APIENTRY glDeleteVertexArraysOES (GLsizei n, const GLuint *arrays);
+GL_API void GL_APIENTRY glGenVertexArraysOES (GLsizei n, GLuint *arrays);
+GL_API GLboolean GL_APIENTRY glIsVertexArrayOES (GLuint array);
+#endif
+typedef void (GL_APIENTRYP PFNGLBINDVERTEXARRAYOESPROC) (GLuint array);
+typedef void (GL_APIENTRYP PFNGLDELETEVERTEXARRAYSOESPROC) (GLsizei n, const GLuint *arrays);
+typedef void (GL_APIENTRYP PFNGLGENVERTEXARRAYSOESPROC) (GLsizei n, GLuint *arrays);
+typedef GLboolean (GL_APIENTRYP PFNGLISVERTEXARRAYOESPROC) (GLuint array);
+#endif
 
 /*------------------------------------------------------------------------*
  * AMD extension functions
@@ -1043,25 +1043,24 @@ typedef void (GL_APIENTRYP PFNGLFLUSHMAPPEDBUFFERRANGEEXTPROC) (GLenum target, G
 /* GL_EXT_multisampled_render_to_texture */
 #ifndef GL_EXT_multisampled_render_to_texture
 #define GL_EXT_multisampled_render_to_texture 1
-//#ifdef GL_GLEXT_PROTOTYPES
-//GL_API void GL_APIENTRY glRenderbufferStorageMultisampleEXT (GLenum, GLsizei, GLenum, GLsizei, GLsizei);
-//GL_API void GL_APIENTRY glFramebufferTexture2DMultisampleEXT (GLenum, GLenum, GLenum, GLuint, GLint, GLsizei);
-//#endif
-//typedef void (GL_APIENTRYP PFNGLRENDERBUFFERSTORAGEMULTISAMPLEEXTPROC) (GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
-//typedef void (GL_APIENTRYP PFNGLFRAMEBUFFERTEXTURE2DMULTISAMPLEEXTPROC) (GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLsizei samples);
+#ifdef GL_GLEXT_PROTOTYPES
+GL_API void GL_APIENTRY glRenderbufferStorageMultisampleEXT (GLenum, GLsizei, GLenum, GLsizei, GLsizei);
+GL_API void GL_APIENTRY glFramebufferTexture2DMultisampleEXT (GLenum, GLenum, GLenum, GLuint, GLint, GLsizei);
+#endif
+typedef void (GL_APIENTRYP PFNGLRENDERBUFFERSTORAGEMULTISAMPLEEXTPROC) (GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
+typedef void (GL_APIENTRYP PFNGLFRAMEBUFFERTEXTURE2DMULTISAMPLEEXTPROC) (GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLsizei samples);
 #endif
 
 /* GL_EXT_multi_draw_arrays */
-//#ifndef GL_EXT_multi_draw_arrays
-//#define GL_EXT_multi_draw_arrays 1
-//#ifdef GL_GLEXT_PROTOTYPES
-//GL_API void GL_APIENTRY glMultiDrawArraysEXT (GLenum, const GLint *, const GLsizei *, GLsizei);
-//GL_API void GL_APIENTRY glMultiDrawElementsEXT (GLenum, const GLsizei *, GLenum, const GLvoid* *, GLsizei);
-//#endif
-//typedef void (GL_APIENTRYP PFNGLMULTIDRAWARRAYSEXTPROC) (GLenum mode, const GLint *first, const GLsizei *count, GLsizei primcount);
-//typedef void (GL_APIENTRYP PFNGLMULTIDRAWELEMENTSEXTPROC) (GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount);
-//#endif
-
+#ifndef GL_EXT_multi_draw_arrays
+#define GL_EXT_multi_draw_arrays 1
+#ifdef GL_GLEXT_PROTOTYPES
+GL_API void GL_APIENTRY glMultiDrawArraysEXT (GLenum, const GLint *, const GLsizei *, GLsizei);
+GL_API void GL_APIENTRY glMultiDrawElementsEXT (GLenum, const GLsizei *, GLenum, const GLvoid* *, GLsizei);
+#endif /* GL_GLEXT_PROTOTYPES */
+typedef void (GL_APIENTRYP PFNGLMULTIDRAWARRAYSEXTPROC) (GLenum mode, const GLint *first, const GLsizei *count, GLsizei primcount);
+typedef void (GL_APIENTRYP PFNGLMULTIDRAWELEMENTSEXTPROC) (GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount);
+#endif
 
 /* GL_EXT_read_format_bgra */
 #ifndef GL_EXT_read_format_bgra
@@ -1271,67 +1270,15 @@ typedef void (GL_APIENTRYP PFNGLSTARTTILINGQCOMPROC) (GLuint x, GLuint y, GLuint
 typedef void (GL_APIENTRYP PFNGLENDTILINGQCOMPROC) (GLbitfield preserveMask);
 #endif
 
+/******************************************************************************/
+/* 20140930-sw815.ha : SEC proprietary specs                                  */
+#ifndef GL_EXT_multisampled_render_to_texture
+#define GL_TEXTURE_SAMPLES_EXT                     0x9136
+#endif
+/******************************************************************************/
+
 #ifdef __cplusplus
 }
 #endif
 
 #endif /* __glext_h_ */
-
-/* 20140709-joonbum.ko@samsung.com : Type different ( Parameters of glMultiDrawElementsEXT ) */
-
-/* GL_EXT_multi_draw_arrays */
-#ifndef GL_EXT_multi_draw_arrays
-#define GL_EXT_multi_draw_arrays 1
-#ifdef GL_GLEXT_PROTOTYPES
-GL_API void GL_APIENTRY glMultiDrawArraysEXT (GLenum, GLint *, GLsizei *, GLsizei);
-GL_API void GL_APIENTRY glMultiDrawElementsEXT (GLenum, const GLsizei *, GLenum, const GLvoid* *, GLsizei);
-#endif /* GL_GLEXT_PROTOTYPES */
-typedef void (GL_APIENTRYP PFNGLMULTIDRAWARRAYSEXTPROC) (GLenum mode, GLint *first, GLsizei *count, GLsizei primcount);
-typedef void (GL_APIENTRYP PFNGLMULTIDRAWELEMENTSEXTPROC) (GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount);
-#endif
-
-
-/* 20140709-joonbum.ko@samsung.com : Re-definition */
-
-/* GL_EXT_multisampled_render_to_texture */
-#ifndef GL_EXT_multisampled_render_to_texture
-#define GL_RENDERBUFFER_SAMPLES_EXT                0x9133
-#define GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_EXT  0x9134
-#define GL_MAX_SAMPLES_EXT                         0x9135
-#define GL_TEXTURE_SAMPLES_EXT                     0x9136
-
-#ifdef GL_GLEXT_PROTOTYPES
-GL_APICALL void GL_APIENTRY glRenderbufferStorageMultisampleEXT( GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
-GL_APICALL void GL_APIENTRY glFramebufferTexture2DMultisampleEXT( GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLsizei samples);
-#endif
-typedef void (GL_APIENTRYP PFNGLRENDERBUFFERSTORAGEMULTISAMPLEEXTPROC) (GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height);
-typedef void (GL_APIENTRYP PFNGLFRAMEBUFFERTEXTURE2DMULTISAMPLEEXTPROC) (GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLsizei samples);
-#endif
-
-
-
-/* 20140709-joonbum.ko@samsung.com : Parameter type different */
-
-/* GL_OES_vertex_array_object  */
-#ifndef GL_OES_vertex_array_object
-#define GL_OES_vertex_array_object 1
-#ifdef GL_GLEXT_PROTOTYPES
-GL_API void GL_APIENTRY glBindVertexArrayOES(GLuint vertexarray);
-GL_API void GL_APIENTRY glDeleteVertexArraysOES(GLsizei n, const GLuint *vertexarrays);
-GL_API void GL_APIENTRY glGenVertexArraysOES(GLsizei n, const GLuint *vertexarrays);
-GL_API GLboolean GL_APIENTRY glIsVertexArrayOES (GLuint vertexarray);
-#endif
-typedef void (GL_APIENTRYP PFNGLBINDVERTEXARRAYOESPROC) (GLuint vertexarray);
-typedef void (GL_APIENTRYP PFNGLDELETEVERTEXARRAYSOESPROC) (GLsizei n, const GLuint *vertexarrays);
-typedef void (GL_APIENTRYP PFNGLGENVERTEXARRAYSOESPROC) (GLsizei n, const GLuint *vertexarrays);
-typedef GLboolean (GL_APIENTRYP PFNGLISVERTEXARRAYOESPROC) (GLuint vertexarray);
-#endif
-
-
-
-
-
-
-
-
-

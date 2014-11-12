@@ -19,8 +19,9 @@
  *
  */
 
-#include "GLES2/gl2.h"
+#include "GLES3/gl3.h"
 
+/* GLES ver 2.0 */
 void glActiveTexture (GLenum texture) { return; }
 void glAttachShader (GLuint program, GLuint shader) { return; }
 void glBindAttribLocation (GLuint program, GLuint index, const GLchar* name) { return; }
@@ -101,7 +102,7 @@ int glGetUniformLocation (GLuint program, const GLchar* name) { return 0; }
 void glGetVertexAttribfv (GLuint index, GLenum pname, GLfloat* params) { return; }
 void glGetVertexAttribiv (GLuint index, GLenum pname, GLint* params) { return; }
 void glGetVertexAttribPointerv (GLuint index, GLenum pname, GLvoid** pointer) { return; }
-void glHint (GLenum target, GLenum mode) { return 0; }
+void glHint (GLenum target, GLenum mode) { return; }
 GLboolean glIsBuffer (GLuint buffer) { return 0; }
 GLboolean glIsEnabled (GLenum cap) { return 0; }
 GLboolean glIsFramebuffer (GLuint framebuffer) { return 0; }
@@ -119,7 +120,7 @@ void glRenderbufferStorage (GLenum target, GLenum internalformat, GLsizei width,
 void glSampleCoverage (GLclampf value, GLboolean invert) { return; }
 void glScissor (GLint x, GLint y, GLsizei width, GLsizei height) { return; }
 void glShaderBinary (GLsizei n, const GLuint* shaders, GLenum binaryformat, const GLvoid* binary, GLsizei length) { return; }
-void glShaderSource (GLuint shader, GLsizei count, const GLchar** string, const GLint* length) { return; }
+void glShaderSource (GLuint shader, GLsizei count, const GLchar* const * string, const GLint* length) { return; }
 void glStencilFunc (GLenum func, GLint ref, GLuint mask) { return; }
 void glStencilFuncSeparate (GLenum face, GLenum func, GLint ref, GLuint mask) { return; }
 void glStencilMask (GLuint mask) { return; }
@@ -164,179 +165,182 @@ void glVertexAttrib4fv (GLuint indx, const GLfloat* values) { return; }
 void glVertexAttribPointer (GLuint indx, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const GLvoid* ptr) { return; }
 void glViewport (GLint x, GLint y, GLsizei width, GLsizei height) { return; }
 
+/* GLES ver 3.0 */
+void glReadBuffer(GLenum src) { return; }
+void glDrawRangeElements(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const void *indices) { return; }
+void glTexImage3D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const void *pixels) { return; }
+void glTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const void *pixels) { return; }
+void glCopyTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height) { return; }
+void glCompressedTexImage3D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, const void *data) { return; }
+void glCompressedTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, const void *data) { return; }
+void glGenQueries(GLsizei n, GLuint *ids) { return; }
+void glDeleteQueries(GLsizei n, const GLuint *ids) { return; }
+GLboolean glIsQuery(GLuint id) { return 0; }
+void glBeginQuery(GLenum target, GLuint id) { return; }
+void glEndQuery(GLenum target) { return; }
+void glGetQueryiv(GLenum target, GLenum pname, GLint *params) { return; }
+void glGetQueryObjectuiv(GLuint id, GLenum pname, GLuint *params) { return; }
+GLboolean glUnmapBuffer(GLenum target) { return 0; }
+void glGetBufferPointerv(GLenum target, GLenum pname, void **params) { return; }
+void glDrawBuffers(GLsizei n, const GLenum *bufs) { return; }
+void glUniformMatrix2x3fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value) { return; }
+void glUniformMatrix3x2fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value) { return; }
+void glUniformMatrix2x4fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value) { return; }
+void glUniformMatrix4x2fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value) { return; }
+void glUniformMatrix3x4fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value) { return; }
+void glUniformMatrix4x3fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value) { return; }
+void glBlitFramebuffer(GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter) { return; }
+void glRenderbufferStorageMultisample(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height) { return; }
+void glFramebufferTextureLayer(GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer) { return; }
+void *glMapBufferRange(GLenum target, GLintptr offset, GLsizeiptr length, GLbitfield access) { return 0; }
+void glFlushMappedBufferRange(GLenum target, GLintptr offset, GLsizeiptr length) { return; }
+void glBindVertexArray(GLuint array) { return; }
+void glDeleteVertexArrays(GLsizei n, const GLuint *arrays) { return; }
+void glGenVertexArrays(GLsizei n, GLuint *arrays) { return; }
+GLboolean glIsVertexArray(GLuint array) { return 0; }
+void glGetIntegeri_v(GLenum target, GLuint index, GLint *data) { return; }
+void glBeginTransformFeedback(GLenum primitiveMode) { return; }
+void glEndTransformFeedback(void) { return; }
+void glBindBufferRange(GLenum target, GLuint index, GLuint buffer, GLintptr offset, GLsizeiptr size) { return; }
+void glBindBufferBase(GLenum target, GLuint index, GLuint buffer) { return; }
+void glTransformFeedbackVaryings(GLuint program, GLsizei count, const GLchar *const*varyings, GLenum bufferMode) { return; }
+void glGetTransformFeedbackVarying(GLuint program, GLuint index, GLsizei bufSize, GLsizei *length, GLsizei *size, GLenum *type, GLchar *name) { return; }
+void glVertexAttribIPointer(GLuint index, GLint size, GLenum type, GLsizei stride, const void *pointer) { return; }
+void glGetVertexAttribIiv(GLuint index, GLenum pname, GLint *params) { return; }
+void glGetVertexAttribIuiv(GLuint index, GLenum pname, GLuint *params) { return; }
+void glVertexAttribI4i(GLuint index, GLint x, GLint y, GLint z, GLint w) { return; }
+void glVertexAttribI4ui(GLuint index, GLuint x, GLuint y, GLuint z, GLuint w) { return; }
+void glVertexAttribI4iv(GLuint index, const GLint *v) { return; }
+void glVertexAttribI4uiv(GLuint index, const GLuint *v) { return; }
+void glGetUniformuiv(GLuint program, GLint location, GLuint *params) { return; }
+GLint glGetFragDataLocation(GLuint program, const GLchar *name) { return 0; }
+void glUniform1ui(GLint location, GLuint v0) { return; }
+void glUniform2ui(GLint location, GLuint v0, GLuint v1) { return; }
+void glUniform3ui(GLint location, GLuint v0, GLuint v1, GLuint v2) { return; }
+void glUniform4ui(GLint location, GLuint v0, GLuint v1, GLuint v2, GLuint v3) { return; }
+void glUniform1uiv(GLint location, GLsizei count, const GLuint *value) { return; }
+void glUniform2uiv(GLint location, GLsizei count, const GLuint *value) { return; }
+void glUniform3uiv(GLint location, GLsizei count, const GLuint *value) { return; }
+void glUniform4uiv(GLint location, GLsizei count, const GLuint *value) { return; }
+void glClearBufferiv(GLenum buffer, GLint drawbuffer, const GLint *value) { return; }
+void glClearBufferuiv(GLenum buffer, GLint drawbuffer, const GLuint *value) { return; }
+void glClearBufferfv(GLenum buffer, GLint drawbuffer, const GLfloat *value) { return; }
+void glClearBufferfi(GLenum buffer, GLint drawbuffer, GLfloat depth, GLint stencil) { return; }
+const GLubyte *glGetStringi(GLenum name, GLuint index) { return 0; }
+void glCopyBufferSubData(GLenum readTarget, GLenum writeTarget, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size) { return; }
+void glGetUniformIndices(GLuint program, GLsizei uniformCount, const GLchar *const*uniformNames, GLuint *uniformIndices) { return; }
+void glGetActiveUniformsiv(GLuint program, GLsizei uniformCount, const GLuint *uniformIndices, GLenum pname, GLint *params) { return; }
+GLuint glGetUniformBlockIndex(GLuint program, const GLchar *uniformBlockName) { return 0; }
+void glGetActiveUniformBlockiv(GLuint program, GLuint uniformBlockIndex, GLenum pname, GLint *params) { return; }
+void glGetActiveUniformBlockName(GLuint program, GLuint uniformBlockIndex, GLsizei bufSize, GLsizei *length, GLchar *uniformBlockName) { return; }
+void glUniformBlockBinding(GLuint program, GLuint uniformBlockIndex, GLuint uniformBlockBinding) { return; }
+void glDrawArraysInstanced(GLenum mode, GLint first, GLsizei count, GLsizei instancecount) { return; }
+void glDrawElementsInstanced(GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei instancecount) { return; }
+GLsync glFenceSync(GLenum condition, GLbitfield flags) { return 0; }
+GLboolean glIsSync(GLsync sync) { return 0; }
+void glDeleteSync(GLsync sync) { return; }
+GLenum glClientWaitSync(GLsync sync, GLbitfield flags, GLuint64 timeout) { return 0; }
+void glWaitSync(GLsync sync, GLbitfield flags, GLuint64 timeout) { return; }
+void glGetInteger64v(GLenum pname, GLint64 *data) { return; }
+void glGetSynciv(GLsync sync, GLenum pname, GLsizei bufSize, GLsizei *length, GLint *values) { return; }
+void glGetInteger64i_v(GLenum target, GLuint index, GLint64 *data) { return; }
+void glGetBufferParameteri64v(GLenum target, GLenum pname, GLint64 *params) { return; }
+void glGenSamplers(GLsizei count, GLuint *samplers) { return; }
+void glDeleteSamplers(GLsizei count, const GLuint *samplers) { return; }
+GLboolean glIsSampler(GLuint sampler) { return 0; }
+void glBindSampler(GLuint unit, GLuint sampler) { return; }
+void glSamplerParameteri(GLuint sampler, GLenum pname, GLint param) { return; }
+void glSamplerParameteriv(GLuint sampler, GLenum pname, const GLint *param) { return; }
+void glSamplerParameterf(GLuint sampler, GLenum pname, GLfloat param) { return; }
+void glSamplerParameterfv(GLuint sampler, GLenum pname, const GLfloat *param) { return; }
+void glGetSamplerParameteriv(GLuint sampler, GLenum pname, GLint *params) { return; }
+void glGetSamplerParameterfv(GLuint sampler, GLenum pname, GLfloat *params) { return; }
+void glVertexAttribDivisor(GLuint index, GLuint divisor) { return; }
+void glBindTransformFeedback(GLenum target, GLuint id) { return; }
+void glDeleteTransformFeedbacks(GLsizei n, const GLuint *ids) { return; }
+void glGenTransformFeedbacks(GLsizei n, GLuint *ids) { return; }
+GLboolean glIsTransformFeedback(GLuint id) { return 0; }
+void glPauseTransformFeedback(void) { return; }
+void glResumeTransformFeedback(void) { return; }
+void glGetProgramBinary(GLuint program, GLsizei bufSize, GLsizei *length, GLenum *binaryFormat, void *binary) { return; }
+void glProgramBinary(GLuint program, GLenum binaryFormat, const void *binary, GLsizei length) { return; }
+void glProgramParameteri(GLuint program, GLenum pname, GLint value) { return; }
+void glInvalidateFramebuffer(GLenum target, GLsizei numAttachments, const GLenum *attachments) { return; }
+void glInvalidateSubFramebuffer(GLenum target, GLsizei numAttachments, const GLenum *attachments, GLint x, GLint y, GLsizei width, GLsizei height) { return; }
+void glTexStorage2D(GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height) { return; }
+void glTexStorage3D(GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth) { return; }
+void glGetInternalformativ(GLenum target, GLenum internalformat, GLenum pname, GLsizei bufSize, GLint *params) { return; }
 
-typedef void (*__egl_funcptr)();
+/* GLES ver 3.1 */
+void glDispatchCompute(GLuint num_groups_x, GLuint num_groups_y, GLuint num_groups_z) { return; }
+void glDispatchComputeIndirect(GLintptr indirect) { return; }
+void glDrawArraysIndirect(GLenum mode, const void *indirect) { return; }
+void glDrawElementsIndirect(GLenum mode, GLenum type, const void *indirect) { return; }
+void glFramebufferParameteri(GLenum target, GLenum pname, GLint param) { return; }
+void glGetFramebufferParameteriv(GLenum target, GLenum pname, GLint *params) { return; }
+void glGetProgramInterfaceiv(GLuint program, GLenum programInterface, GLenum pname, GLint *params) { return; }
+GLuint glGetProgramResourceIndex(GLuint program, GLenum programInterface, const GLchar *name) { return 0; }
+void glGetProgramResourceName(GLuint program, GLenum programInterface, GLuint index, GLsizei bufSize, GLsizei *length, GLchar *name) { return; }
+void glGetProgramResourceiv(GLuint program, GLenum programInterface, GLuint index, GLsizei propCount, const GLenum *props, GLsizei bufSize, GLsizei *length, GLint *params) { return; }
+GLint glGetProgramResourceLocation(GLuint program, GLenum programInterface, const GLchar *name) { return 0; }
+void glUseProgramStages(GLuint pipeline, GLbitfield stages, GLuint program) { return; }
+void glActiveShaderProgram(GLuint pipeline, GLuint program) { return; }
+GLuint glCreateShaderProgramv(GLenum type, GLsizei count, const GLchar *const*strings) { return 0; }
+void glBindProgramPipeline(GLuint pipeline) { return; }
+void glDeleteProgramPipelines(GLsizei n, const GLuint *pipelines) { return; }
+void glGenProgramPipelines(GLsizei n, GLuint *pipelines) { return; }
+GLboolean glIsProgramPipeline(GLuint pipeline) { return 0; }
+void glGetProgramPipelineiv(GLuint pipeline, GLenum pname, GLint *params) { return; }
+void glProgramUniform1i(GLuint program, GLint location, GLint v0) { return; }
+void glProgramUniform2i(GLuint program, GLint location, GLint v0, GLint v1) { return; }
+void glProgramUniform3i(GLuint program, GLint location, GLint v0, GLint v1, GLint v2) { return; }
+void glProgramUniform4i(GLuint program, GLint location, GLint v0, GLint v1, GLint v2, GLint v3) { return; }
+void glProgramUniform1ui(GLuint program, GLint location, GLuint v0) { return; }
+void glProgramUniform2ui(GLuint program, GLint location, GLuint v0, GLuint v1) { return; }
+void glProgramUniform3ui(GLuint program, GLint location, GLuint v0, GLuint v1, GLuint v2) { return; }
+void glProgramUniform4ui(GLuint program, GLint location, GLuint v0, GLuint v1, GLuint v2, GLuint v3) { return; }
+void glProgramUniform1f(GLuint program, GLint location, GLfloat v0) { return; }
+void glProgramUniform2f(GLuint program, GLint location, GLfloat v0, GLfloat v1) { return; }
+void glProgramUniform3f(GLuint program, GLint location, GLfloat v0, GLfloat v1, GLfloat v2) { return; }
+void glProgramUniform4f(GLuint program, GLint location, GLfloat v0, GLfloat v1, GLfloat v2, GLfloat v3) { return; }
+void glProgramUniform1iv(GLuint program, GLint location, GLsizei count, const GLint *value) { return; }
+void glProgramUniform2iv(GLuint program, GLint location, GLsizei count, const GLint *value) { return; }
+void glProgramUniform3iv(GLuint program, GLint location, GLsizei count, const GLint *value) { return; }
+void glProgramUniform4iv(GLuint program, GLint location, GLsizei count, const GLint *value) { return; }
+void glProgramUniform1uiv(GLuint program, GLint location, GLsizei count, const GLuint *value) { return; }
+void glProgramUniform2uiv(GLuint program, GLint location, GLsizei count, const GLuint *value) { return; }
+void glProgramUniform3uiv(GLuint program, GLint location, GLsizei count, const GLuint *value) { return; }
+void glProgramUniform4uiv(GLuint program, GLint location, GLsizei count, const GLuint *value) { return; }
+void glProgramUniform1fv(GLuint program, GLint location, GLsizei count, const GLfloat *value) { return; }
+void glProgramUniform2fv(GLuint program, GLint location, GLsizei count, const GLfloat *value) { return; }
+void glProgramUniform3fv(GLuint program, GLint location, GLsizei count, const GLfloat *value) { return; }
+void glProgramUniform4fv(GLuint program, GLint location, GLsizei count, const GLfloat *value) { return; }
+void glProgramUniformMatrix2fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value) { return; }
+void glProgramUniformMatrix3fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value) { return; }
+void glProgramUniformMatrix4fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value) { return; }
+void glProgramUniformMatrix2x3fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value) { return; }
+void glProgramUniformMatrix3x2fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value) { return; }
+void glProgramUniformMatrix2x4fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value) { return; }
+void glProgramUniformMatrix4x2fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value) { return; }
+void glProgramUniformMatrix3x4fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value) { return; }
+void glProgramUniformMatrix4x3fv(GLuint program, GLint location, GLsizei count, GLboolean transpose, const GLfloat *value) { return; }
+void glValidateProgramPipeline(GLuint pipeline) { return; }
+void glGetProgramPipelineInfoLog(GLuint pipeline, GLsizei bufSize, GLsizei *length, GLchar *infoLog) { return; }
+void glBindImageTexture(GLuint unit, GLuint texture, GLint level, GLboolean layered, GLint layer, GLenum access, GLenum format) { return; }
+void glGetBooleani_v(GLenum target, GLuint index, GLboolean *data) { return; }
+void glMemoryBarrier(GLbitfield barriers) { return; }
+void glMemoryBarrierByRegion(GLbitfield barriers) { return; }
+void glTexStorage2DMultisample(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations) { return; }
+void glGetMultisamplefv(GLenum pname, GLuint index, GLfloat *val) { return; }
+void glSampleMaski(GLuint maskNumber, GLbitfield mask) { return; }
+void glGetTexLevelParameteriv(GLenum target, GLint level, GLenum pname, GLint *params) { return; }
+void glGetTexLevelParameterfv(GLenum target, GLint level, GLenum pname, GLfloat *params) { return; }
+void glBindVertexBuffer(GLuint bindingindex, GLuint buffer, GLintptr offset, GLsizei stride) { return; }
+void glVertexAttribFormat(GLuint attribindex, GLint size, GLenum type, GLboolean normalized, GLuint relativeoffset) { return; }
+void glVertexAttribIFormat(GLuint attribindex, GLint size, GLenum type, GLuint relativeoffset) { return; }
+void glVertexAttribBinding(GLuint attribindex, GLuint bindingindex) { return; }
+void glVertexBindingDivisor(GLuint bindingindex, GLuint divisor) { return; }
 
-typedef struct gles2_ExtProcedure
-{
-	const char *pProcname;
-	__egl_funcptr pfnProc;
-} GLES2_ExtProcedures; 
-
-GLES2_ExtProcedures gles2ExtProcedures[] =
-{
-#ifdef GL_OES_EGL_image 
-			  {"glEGLImageTargetTexture2DOES", 			(__egl_funcptr)glEGLImageTargetTexture2DOES},
-			  {"glEGLImageTargetRenderbufferStorageOES",			(__egl_funcptr)glEGLImageTargetRenderbufferStorageOES},
-#endif /* defined(GL_OES_EGL_image) */
-#ifdef GL_OES_get_program_binary
-                          {"glGetProgramBinaryOES", (__egl_funcptr)glGetProgramBinaryOES },
-                          {"glProgramBinaryOES", (__egl_funcptr)glProgramBinaryOES },
- #endif
-
- 
-#ifdef GL_OES_mapbuffer
-                          {"glMapBufferOES", (__egl_funcptr)glMapBufferOES },
-                          {"glUnmapBufferOES", (__egl_funcptr)glUnmapBufferOES },
-                          {"glGetBufferPointervOES", (__egl_funcptr)glGetBufferPointervOES }, 
-#endif
-
-#ifdef GL_OES_texture_3D
-                          {"glTexImage3DOES", (__egl_funcptr)glTexImage3DOES },
-                          {"glTexSubImage3DOES", (__egl_funcptr)glTexSubImage3DOES },
-                          {"glCopyTexSubImage3DOES", (__egl_funcptr)glCopyTexSubImage3DOES }, 
-                          {"glCompressedTexImage3DOES", (__egl_funcptr)glCompressedTexImage3DOES },
-                          {"glCompressedTexSubImage3DOES", (__egl_funcptr)glCompressedTexSubImage3DOES },
-                          {"glFramebufferTexture3DOES", (__egl_funcptr)glFramebufferTexture3DOES }, 
-#endif
-
-#ifdef GL_OES_vertex_array_object 
-                          {"glBindVertexArrayOES", (__egl_funcptr)glBindVertexArrayOES },
-                          {"glDeleteVertexArraysOES", (__egl_funcptr)glDeleteVertexArraysOES },
-                          {"glGenVertexArraysOES", (__egl_funcptr)glGenVertexArraysOES }, 
-                          {"glIsVertexArrayOES", (__egl_funcptr)glIsVertexArrayOES },
-#endif
-
-#ifdef GL_AMD_performance_monitor
-                          {"glGetPerfMonitorGroupsAMD", (__egl_funcptr)glGetPerfMonitorGroupsAMD },
-                          {"glGetPerfMonitorCountersAMD", (__egl_funcptr)glGetPerfMonitorCountersAMD },
-                          {"glGetPerfMonitorGroupStringAMD", (__egl_funcptr)glGetPerfMonitorGroupStringAMD }, 
-                          {"glGetPerfMonitorCounterStringAMD", (__egl_funcptr)glGetPerfMonitorCounterStringAMD },
-                          {"glGetPerfMonitorCounterInfoAMD", (__egl_funcptr)glGetPerfMonitorCounterInfoAMD },
-                          {"glGenPerfMonitorsAMD", (__egl_funcptr)glGenPerfMonitorsAMD },
-                          {"glDeletePerfMonitorsAMD", (__egl_funcptr)glDeletePerfMonitorsAMD }, 
-                          {"glSelectPerfMonitorCountersAMD", (__egl_funcptr)glSelectPerfMonitorCountersAMD },
-                          {"glBeginPerfMonitorAMD", (__egl_funcptr)glBeginPerfMonitorAMD },
-                          {"glEndPerfMonitorAMD", (__egl_funcptr)glEndPerfMonitorAMD },
-                          {"glGetPerfMonitorCounterDataAMD", (__egl_funcptr)glGetPerfMonitorCounterDataAMD }, 
- 
-#endif
-
-#ifdef GL_ANGLE_framebuffer_blit
-                          {"glBlitFramebufferANGLE", (__egl_funcptr)glBlitFramebufferANGLE }, 
-#endif
-
-#ifdef GL_ANGLE_framebuffer_multisample
-                          {"glRenderbufferStorageMultisampleANGLE", (__egl_funcptr)glRenderbufferStorageMultisampleANGLE }, 
-#endif
- 
-#ifdef GL_APPLE_framebuffer_multisample
-                          {"glRenderbufferStorageMultisampleAPPLE", (__egl_funcptr)glRenderbufferStorageMultisampleAPPLE },
-                          {"glResolveMultisampleFramebufferAPPLE", (__egl_funcptr)glResolveMultisampleFramebufferAPPLE }, 
-#endif
- 
-#ifdef GL_EXT_discard_framebuffer
-                          {"glDiscardFramebufferEXT", (__egl_funcptr)glDiscardFramebufferEXT }, 
-#endif
-
-#ifdef GL_EXT_multi_draw_arrays 
-                          {"glMultiDrawArraysEXT", (__egl_funcptr)glMultiDrawArraysEXT },
-                          {"glMultiDrawElementsEXT", (__egl_funcptr)glMultiDrawElementsEXT }, 
-#endif
-
-
-#ifdef GL_EXT_multisampled_render_to_texture
-                          {"glRenderbufferStorageMultisampleEXT", (__egl_funcptr)glRenderbufferStorageMultisampleEXT },
-                          {"glFramebufferTexture2DMultisampleEXT", (__egl_funcptr)glFramebufferTexture2DMultisampleEXT }, 
-#endif
-
-#ifdef GL_IMG_multisampled_render_to_texture
-                          {"glRenderbufferStorageMultisampleIMG", (__egl_funcptr)glRenderbufferStorageMultisampleIMG },
-                          {"glFramebufferTexture2DMultisampleIMG", (__egl_funcptr)glFramebufferTexture2DMultisampleIMG },
-#endif
-
-#ifdef GL_IMG_texture_stream2
-                          {"glTexBindStreamIMG", (__egl_funcptr)glTexBindStreamIMG },
-                          {"glGetTexStreamDeviceAttributeivIMG", (__egl_funcptr)glGetTexStreamDeviceAttributeivIMG },
-                          {"glGetTexStreamDeviceNameIMG", (__egl_funcptr)glGetTexStreamDeviceNameIMG },
-#endif
-
- 
-#ifdef GL_NV_fence
-                          {"glDeleteFencesNV", (__egl_funcptr)glDeleteFencesNV },
-                          {"glGenFencesNV", (__egl_funcptr)glGenFencesNV },
-                          {"glIsFenceNV", (__egl_funcptr)glIsFenceNV },
-                          {"glTestFenceNV", (__egl_funcptr)glTestFenceNV },
-                          {"glGetFenceivNV", (__egl_funcptr)glGetFenceivNV },
-                          {"glFinishFenceNV", (__egl_funcptr)glFinishFenceNV },
-                          {"glSetFenceNV", (__egl_funcptr)glSetFenceNV },  
-
-#endif
- 
-#ifdef GL_NV_coverage_sample
-                          {"glCoverageMaskNV", (__egl_funcptr)glCoverageMaskNV },
-                          {"glCoverageOperationNV", (__egl_funcptr)glCoverageOperationNV },   
-#endif
-
- 
-#ifdef GL_QCOM_driver_control
-                          {"glGetDriverControlsQCOM", (__egl_funcptr)glGetDriverControlsQCOM },
-                          {"glGetDriverControlStringQCOM", (__egl_funcptr)glGetDriverControlStringQCOM },
-                          {"glEnableDriverControlQCOM", (__egl_funcptr)glEnableDriverControlQCOM },
-                          {"glDisableDriverControlQCOM", (__egl_funcptr)glDisableDriverControlQCOM },   
-#endif 
-
-#ifdef GL_QCOM_extended_get
-                          {"glExtGetTexturesQCOM", (__egl_funcptr)glExtGetTexturesQCOM },
-                          {"glExtGetBuffersQCOM", (__egl_funcptr)glExtGetBuffersQCOM },
-                          {"glExtGetRenderbuffersQCOM", (__egl_funcptr)glExtGetRenderbuffersQCOM },
-                          {"glExtGetFramebuffersQCOM", (__egl_funcptr)glExtGetFramebuffersQCOM },   
-                          {"glExtGetTexLevelParameterivQCOM", (__egl_funcptr)glExtGetTexLevelParameterivQCOM },
-                          {"glExtTexObjectStateOverrideiQCOM", (__egl_funcptr)glExtTexObjectStateOverrideiQCOM },
-                          {"glExtGetTexSubImageQCOM", (__egl_funcptr)glExtGetTexSubImageQCOM },
-                          {"glExtGetBufferPointervQCOM", (__egl_funcptr)glExtGetBufferPointervQCOM },  
-#endif 
-
-#ifdef GL_QCOM_extended_get2
-                          {"glExtGetShadersQCOM", (__egl_funcptr)glExtGetShadersQCOM },
-                          {"glExtGetProgramsQCOM", (__egl_funcptr)glExtGetProgramsQCOM },
-                          {"glExtIsProgramBinaryQCOM", (__egl_funcptr)glExtIsProgramBinaryQCOM },
-                          {"glExtGetProgramBinarySourceQCOM", (__egl_funcptr)glExtGetProgramBinarySourceQCOM },  
-
-#endif
- 
-#ifdef GL_QCOM_tiled_rendering
-                          {"glStartTilingQCOM", (__egl_funcptr)glStartTilingQCOM },
-                          {"glEndTilingQCOM", (__egl_funcptr)glEndTilingQCOM },   
-#endif
-
-		      {0,0}
-
-
-} ;
-
-typedef void (*__eglMustCastToProperFunctionPointerType)(void);
-
- __eglMustCastToProperFunctionPointerType glGetGles2Proc(const char *procname) 
-{
-		GLint uIndex;
-		
-
-		if (procname== 0)
-		{
-			return 0;
-		}
- 
-		//gles2
-		for (uIndex = 0 ; gles2ExtProcedures[uIndex].pProcname !=0 ; uIndex++)
-		{
-			if( strncmp( gles2ExtProcedures[uIndex].pProcname, procname, strlen( gles2ExtProcedures[uIndex].pProcname )+1 )==0 )
-			{
-				return gles2ExtProcedures[uIndex].pfnProc;
-			}
-		}		 
- return 0;
-}
 
 /* GL_OES_EGL_image */
 #ifdef GL_OES_EGL_image
