@@ -45,59 +45,59 @@ clean:
 
 install: all
 	@echo "installing EGL..."
-	@mkdir -p $(prefix)/include/EGL
-	@cp $(EGL_FNAME) $(prefix)/lib/
-	@cp $(SRC_DIR)/include/EGL/egl.h $(prefix)/include/EGL/
-	@cp $(SRC_DIR)/include/EGL/eglext.h $(prefix)/include/EGL/
-	@cp $(SRC_DIR)/include/EGL/eglplatform.h $(prefix)/include/EGL/
+	@mkdir -p $(includedir)/EGL
+	@cp $(EGL_FNAME) $(libdir)/
+	@cp $(SRC_DIR)/include/EGL/egl.h $(includedir)/EGL/
+	@cp $(SRC_DIR)/include/EGL/eglext.h $(includedir)/EGL/
+	@cp $(SRC_DIR)/include/EGL/eglplatform.h $(includedir)/EGL/
 	@echo "installing GLESv1..."
-	@mkdir -p $(prefix)/include/GLES
-	@cp $(GLES11_FNAME) $(prefix)/lib/
-	@cp $(SRC_DIR)/include/GLES/egl.h $(prefix)/include/GLES/
-	@cp $(SRC_DIR)/include/GLES/gl.h $(prefix)/include/GLES/
-	@cp $(SRC_DIR)/include/GLES/glext.h $(prefix)/include/GLES/
-	@cp $(SRC_DIR)/include/GLES/glplatform.h $(prefix)/include/GLES/
+	@mkdir -p $(includedir)/GLES
+	@cp $(GLES11_FNAME) $(libdir)/
+	@cp $(SRC_DIR)/include/GLES/egl.h $(includedir)/GLES/
+	@cp $(SRC_DIR)/include/GLES/gl.h $(includedir)/GLES/
+	@cp $(SRC_DIR)/include/GLES/glext.h $(includedir)/GLES/
+	@cp $(SRC_DIR)/include/GLES/glplatform.h $(includedir)/GLES/
 	@echo "installing GLESv2..."
-	@mkdir -p $(prefix)/include/GLES2
-	@cp $(GLES20_FNAME) $(prefix)/lib/
-	@cp $(SRC_DIR)/include/GLES2/gl2.h $(prefix)/include/GLES2/
-	@cp $(SRC_DIR)/include/GLES2/gl2ext.h $(prefix)/include/GLES2/
-	@cp $(SRC_DIR)/include/GLES2/gl2platform.h $(prefix)/include/GLES2/
+	@mkdir -p $(includedir)/GLES2
+	@cp $(GLES20_FNAME) $(libdir)/
+	@cp $(SRC_DIR)/include/GLES2/gl2.h $(includedir)/GLES2/
+	@cp $(SRC_DIR)/include/GLES2/gl2ext.h $(includedir)/GLES2/
+	@cp $(SRC_DIR)/include/GLES2/gl2platform.h $(includedir)/GLES2/
 	@echo "installing GLESv3..."
-	@mkdir -p $(prefix)/include/GLES3
-	@cp $(GLES31_FNAME) $(prefix)/lib/
-	@cp $(SRC_DIR)/include/GLES3/gl3.h $(prefix)/include/GLES3/
-	@cp $(SRC_DIR)/include/GLES3/gl31.h $(prefix)/include/GLES3/
-	@cp $(SRC_DIR)/include/GLES3/gl3platform.h $(prefix)/include/GLES3/
+	@mkdir -p $(includedir)/GLES3
+	@cp $(GLES31_FNAME) $(libdir)/
+	@cp $(SRC_DIR)/include/GLES3/gl3.h $(includedir)/GLES3/
+	@cp $(SRC_DIR)/include/GLES3/gl31.h $(includedir)/GLES3/
+	@cp $(SRC_DIR)/include/GLES3/gl3platform.h $(includedir)/GLES3/
 	@echo "installing KHR..."
-	@mkdir -p $(prefix)/include/KHR
-	@cp $(SRC_DIR)/include/KHR/khrplatform.h $(prefix)/include/KHR/
+	@mkdir -p $(includedir)/KHR
+	@cp $(SRC_DIR)/include/KHR/khrplatform.h $(includedir)/KHR/
 	@echo "installing pkgconfig..."
-	@mkdir -p $(prefix)/lib/pkgconfig
-	@cp pkgconfig/egl.pc $(prefix)/lib/pkgconfig/
-	@cp pkgconfig/gles11.pc $(prefix)/lib/pkgconfig/
-	@cp pkgconfig/glesv1_cm.pc $(prefix)/lib/pkgconfig/
-	@cp pkgconfig/gles20.pc $(prefix)/lib/pkgconfig/
-	@cp pkgconfig/glesv2.pc $(prefix)/lib/pkgconfig/
-	@cp pkgconfig/gles30.pc $(prefix)/lib/pkgconfig/
-	@cp pkgconfig/glesv3.pc $(prefix)/lib/pkgconfig/
+	@mkdir -p $(libdir)/pkgconfig
+	@cp pkgconfig/egl.pc $(libdir)/pkgconfig/
+	@cp pkgconfig/gles11.pc $(libdir)/pkgconfig/
+	@cp pkgconfig/glesv1_cm.pc $(libdir)/pkgconfig/
+	@cp pkgconfig/gles20.pc $(libdir)/pkgconfig/
+	@cp pkgconfig/glesv2.pc $(libdir)/pkgconfig/
+	@cp pkgconfig/gles30.pc $(libdir)/pkgconfig/
+	@cp pkgconfig/glesv3.pc $(libdir)/pkgconfig/
 	@echo "install completed."
 
 uninstall:
 	@echo "uninstalling..."
-	@rm -fr $(prefix)/include/EGL/
-	@rm -fr $(prefix)/lib/$(EGL_FNAME)
-	@rm -fr $(prefix)/include/GLES/
-	@rm -fr $(prefix)/lib/$(GLES11_FNAME)
-	@rm -fr $(prefix)/include/GLES2/
-	@rm -fr $(prefix)/lib/$(GLES20_FNAME)
-	@rm -fr $(prefix)/include/GLES3/
-	@rm -fr $(prefix)/lib/$(GLES31_FNAME)
-	@rm -fr $(prefix)/include/KHR/
-	@rm -fr $(prefix)/lib/pkgconfig/gles11.pc
-	@rm -fr $(prefix)/lib/pkgconfig/glesv1_cm.pc
-	@rm -fr $(prefix)/lib/pkgconfig/gles20.pc
-	@rm -fr $(prefix)/lib/pkgconfig/glesv2.pc
-	@rm -fr $(prefix)/lib/pkgconfig/gles30.pc
-	@rm -fr $(prefix)/lib/pkgconfig/gles31.pc
+	@rm -fr $(includedir)/EGL/
+	@rm -fr $(libdir)/$(EGL_FNAME)
+	@rm -fr $(includedir)/GLES/
+	@rm -fr $(libdir)/$(GLES11_FNAME)
+	@rm -fr $(includedir)/GLES2/
+	@rm -fr $(libdir)/$(GLES20_FNAME)
+	@rm -fr $(includedir)/GLES3/
+	@rm -fr $(libdir)/$(GLES31_FNAME)
+	@rm -fr $(includedir)/KHR/
+	@rm -fr $(libdir)/pkgconfig/gles11.pc
+	@rm -fr $(libdir)/pkgconfig/glesv1_cm.pc
+	@rm -fr $(libdir)/pkgconfig/gles20.pc
+	@rm -fr $(libdir)/pkgconfig/glesv2.pc
+	@rm -fr $(libdir)/pkgconfig/gles30.pc
+	@rm -fr $(libdir)/pkgconfig/gles31.pc
 	@echo "uninstall completed"
