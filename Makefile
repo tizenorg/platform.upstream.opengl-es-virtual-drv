@@ -74,12 +74,13 @@ install: all
 	@cp $(SRC_DIR)/include/KHR/khrplatform.h $(prefix)/include/KHR/
 	@echo "installing pkgconfig..."
 	@mkdir -p $(prefix)/lib/pkgconfig
+	@cp pkgconfig/egl.pc $(prefix)/lib/pkgconfig/
 	@cp pkgconfig/gles11.pc $(prefix)/lib/pkgconfig/
 	@cp pkgconfig/glesv1_cm.pc $(prefix)/lib/pkgconfig/
 	@cp pkgconfig/gles20.pc $(prefix)/lib/pkgconfig/
 	@cp pkgconfig/glesv2.pc $(prefix)/lib/pkgconfig/
 	@cp pkgconfig/gles30.pc $(prefix)/lib/pkgconfig/
-	@cp pkgconfig/gles31.pc $(prefix)/lib/pkgconfig/
+	@cp pkgconfig/glesv3.pc $(prefix)/lib/pkgconfig/
 	@echo "install completed."
 
 uninstall:

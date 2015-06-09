@@ -103,9 +103,10 @@ ln -sf libGLESv3.so.3.1 %{buildroot}%{_libdir}/libGLESv3.so.3
 %{_includedir}/GLES3/gl31.h
 %{_includedir}/GLES3/gl3platform.h
 %{_includedir}/KHR/khrplatform.h
+%{_libdir}/pkgconfig/egl.pc
 %{_libdir}/pkgconfig/gles11.pc
 %{_libdir}/pkgconfig/glesv1_cm.pc
 %{_libdir}/pkgconfig/gles20.pc
 %{_libdir}/pkgconfig/glesv2.pc
 %{_libdir}/pkgconfig/gles30.pc
-%{_libdir}/pkgconfig/gles31.pc
+%{_libdir}/pkgconfig/glesv3.pc

@@ -3,9 +3,9 @@ exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
 
-Name: gles31
-Description: OpenGL-ES 3.1 Library for Virtual Driver
+Name: egl
+Description: EGL 1.4 Library for Virtual Driver
 Version: 0.1
 Requires:
-Libs: -L${libdir} -lGLESv3 -lEGL
+Libs: -L${libdir} -lEGL
 Cflags: -I${includedir}
